@@ -186,7 +186,7 @@ puts "created #{ Movie.count } movies."
 m1.posts << p1
 m2.posts << p2
 m3.posts << p4
-m4.posts << p2
+m4.posts << p3
 
 puts "testing movie -< posts association:"
 puts " • the post '#{ Post.first.name }' is on the movie '#{ Post.first.movie.name }' "
