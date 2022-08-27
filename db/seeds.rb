@@ -147,10 +147,18 @@ u1.posts << p1
 u2.posts << p2 << p3
 u3.posts << p4
 
+u1.comments << c1 << c5 << c9
+u2.comments << c2 << c7 << c8
+u3.comments << c3 << c4 << c6
+
 # Test the associations we just made:
 puts "Testing user -< posts associations:"
 puts "  • the post '#{ Post.first.name }' is by #{ Post.first.user.name }"
 puts "  • the user #{ User.last.name } has the posts: #{ User.last.posts.pluck(:name).join(', ') }"
+
+puts "Testing user -< comments associations:"
+puts "  • the comment '#{Comment.first.comment }' is by #{ Comment.first.user.name }"
+puts "  • the user #{ User.last.name } has the comments: #{ User.last.comments.pluck(:comment).join(', ') }"
 
 #############################
 print "Creating movies... "
@@ -193,6 +201,8 @@ puts " • the post '#{ Post.first.name }' is on the movie '#{ Post.first.movie.
 puts " • the movie '#{ Movie.first.name }' has the posts '#{ Movie.last.posts.pluck(:name).join(', ') }' "
 
 #####################
+
+
 
 
 
