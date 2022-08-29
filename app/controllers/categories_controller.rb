@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find params[:id]
+    @category = Category.find params[:post_id]
   end
 
   def edit
@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name)
+    params.require(:category).permit(:name, :category, :post_id)
   end
 
 end
