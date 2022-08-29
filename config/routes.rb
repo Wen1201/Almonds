@@ -5,6 +5,13 @@ Rails.application.routes.draw do
 
   
   
+  get 'categories/new'
+  get 'categories/create'
+  get 'categories/index'
+  get 'categories/show'
+  get 'categories/edit'
+  get 'categories/destroy'
+  get 'categories/update'
    root to: 'pages#home'
 
    get '/login' => 'session#new'
