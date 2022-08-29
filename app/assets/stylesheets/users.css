@@ -1,0 +1,20 @@
+
+.field_with_errors input {
+    border: 2px solid red;
+  
+  }
+
+ .user-name {
+
+ } 
+
+ .body {
+    position: relative;
+
+ }
+
+ .user_image {
+    position: absolute;
+    max-width: 30px;
+    max-height: 30px;
+ }

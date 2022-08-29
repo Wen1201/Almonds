@@ -10,6 +10,40 @@
   </head>
 
   <body>
+     <nav class="title">
+       <h1>movie music database</h1>
+
+      <% if @current_user.present? %>
+      Welcome, <%= @current_user.name %>
+       <%= link_to 'Logout', login_path, method: 'delete' %>
+      <% else %>
+        <%= link_to 'Login', login_path %>
+        |
+        <%= link_to 'Sign Up', new_user_path %>
+      <% end %>
+    
+
+       |
+
+       <br>
+
+       <%= link_to 'Home', root_path %>
+       |
+       <%= link_to 'All Posts', posts_path %>
+        <% if @current_user.present? %>
+         |
+         <%= link_to 'Create Post', new_post_path %>
+        <% end %>
+
+       <hr>
+     </nav>
+
     <%= yield %>
+
+    <footer>
+    &copy; Music 2022
+    </footer>
+
+
   </body>
 </html>

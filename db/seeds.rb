@@ -124,19 +124,25 @@ User.destroy_all
 
 u1 = User.create!(
     name: 'Cantrous', 
-    image: 'https://d1hjkbq40fs2x4.cloudfront.net/2016-07-16/files/cat-sample_1313-t.jpg'
+    image: 'https://d1hjkbq40fs2x4.cloudfront.net/2016-07-16/files/cat-sample_1313-t.jpg',
+    email: '123@gmail.com',
+    password: 'chicken'
 
 )
 
 u2 = User.create!(
     name: ' ARCUS1200', 
-    image: 'https://i.pinimg.com/736x/bd/9c/93/bd9c931ca152a2323a4293ff5ad9846b.jpg'
+    image: 'https://i.pinimg.com/736x/bd/9c/93/bd9c931ca152a2323a4293ff5ad9846b.jpg',
+    email: '234@gmail.com',
+    password: 'chicken'
 
 )
 
 u3 = User.create!(
     name: 'Filledagreat', 
-    image: 'https://i.pinimg.com/736x/e6/97/3d/e6973df7ecb61d2829f558e9012a8db0.jpg'
+    image: 'https://i.pinimg.com/736x/e6/97/3d/e6973df7ecb61d2829f558e9012a8db0.jpg',
+    email: '345@gmail.com',
+    password: 'chicken'
 
 )
 
@@ -198,9 +204,35 @@ m4.posts << p3
 
 puts "testing movie -< posts association:"
 puts " • the post '#{ Post.first.name }' is on the movie '#{ Post.first.movie.name }' "
-puts " • the movie '#{ Movie.first.name }' has the posts '#{ Movie.last.posts.pluck(:name).join(', ') }' "
+puts " • the movie '#{ Movie.last.name }' has the posts '#{ Movie.last.posts.pluck(:name).join(', ') }' "
 
 #####################
+
+print "Creating category... "
+
+Category.destroy_all
+
+cat1 = Category.create! name: 'Romance'
+cat2 = Category.create! name: 'Disaster'
+cat3 = Category.create! name: 'Action'
+cat4 = Category.create! name: 'Thriller'
+cat5 = Category.create! name: 'Black Comedy'
+cat6 = Category.create! name: 'Coming-of-age'
+cat7 = Category.create! name: 'Drama'
+
+puts "created #{ Category.count} category."
+
+p1.categories << cat5
+p2.categories << cat3 << cat4
+p3.categories << cat1 << cat2
+p4.categories << cat1 << cat6 << cat7
+
+# Test 
+
+puts "Category '#{ cat1.name }' has posts: #{ cat1.posts.pluck(:name).join(', ') }"
+puts "Post '#{ p4.name }' has categories: #{ p4.categories.pluck(:name).join(', ') }"
+
+
 
 
 

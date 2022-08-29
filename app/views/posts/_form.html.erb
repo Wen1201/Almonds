@@ -1,0 +1,28 @@
+
+
+<% if @post.errors.any? %>
+  <strong>Please correct the following:</strong>
+  <ul>
+    <% @post.errors.full_messages.each do |e| %>
+      <li><%= e %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with model: @post, local: true do |f| %>
+
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+
+  <%= f.label :image %>
+  <br>
+  <%= f.text_field :image %>
+  <br>
+  <br>
+
+  <%= f.submit %>
+
+<% end %>

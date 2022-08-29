@@ -1,0 +1,12 @@
+
+
+
+<div class= "user_image" >
+<% if @user.image.present? %>
+  <%= image_tag @user.image, alt: @user.name %>
+<% end %>
+</div>
+<h2 class="user-name"><%= @user.name %></h2>
+
+<button>Follow</button>
+

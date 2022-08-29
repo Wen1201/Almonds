@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_27_105854) do
+ActiveRecord::Schema.define(version: 2022_08_28_062700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_posts", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "category_id"
+  end
 
   create_table "comments", force: :cascade do |t|
     t.text "comment"
@@ -46,6 +57,8 @@ ActiveRecord::Schema.define(version: 2022_08_27_105854) do
     t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "password_digest"
+    t.text "email"
   end
 
 end
