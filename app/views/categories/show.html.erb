@@ -1,2 +1,13 @@
 <h1><%= @category.name %></h1>
 
+<!--
+ <%= link_to @category.posts.name, post_path(@category.posts.ids) %>
+-->
+<ul>
+<% @category.posts.each do |p| %>
+  <li>
+    <%= link_to p.name, post_path(p.id) %>
+    
+  </li>
+<% end %>
+</ul>

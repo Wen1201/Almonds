@@ -66,6 +66,26 @@ c9 = Comment.create!(
     
 )
 
+c10 = Comment.create!(
+    comment: "People thought that Captain America should die because he deserves a “soldier’s send off.” Those people are wrong. THIS is how a soldier should end his story. He comes home after the war, he passes his legacy on, and settles down to live his life in peace with a family. No PTSD, no night terrors, but peace and content"
+   
+    
+)
+
+c11 = Comment.create!(
+    comment: "I cried like a little baby at this scene. After everything he sacrificed, he fucking deserved a happy ending."
+   
+    
+)
+
+c12 = Comment.create!(
+    comment: "And in that moment, Steve didn’t have to say it, but we all know he was thinking it.
+
+    “I could do this all day.”"
+   
+    
+)
+
 puts "created #{ Comment.count } comments."
 ####################################
 
@@ -102,6 +122,13 @@ p4 = Post.create!(
 
 )
 
+p5 = Post.create!(
+    name: 'End Game', 
+    image: 'https://sportshub.cbsistatic.com/i/2021/03/16/5beecc02-4c79-4ccc-8bac-1affc93aebfa/avengers-4-ending-fan-art-captain-america-peggy-carter-1130869.jpg',
+    
+
+)
+
 
 puts "created #{ Post.count } posts."
 
@@ -109,6 +136,7 @@ p1.comments << c8 << c9
 p2.comments << c4 << c5
 p3.comments << c1 << c2 << c3
 p4.comments << c6 << c7
+p5.comments << c10 << c11 << c12
 
 puts "Testing Post -< comments association:"
 puts " • the comment '#{ Comment.first.comment }' is on the post #{ Comment.first.post.name } "
@@ -146,16 +174,28 @@ u3 = User.create!(
 
 )
 
+u4 = User.create!(
+    name: 'Brandon Layne', 
+    image: 'https://i.pinimg.com/736x/e6/97/3d/e6973df7ecb61d2829f558e9012a8db0.jpg',
+    email: '1@gmail.com',
+    password: 'chicken'
+
+)
+
  puts "created #{ User.count } users."
 
 
-u1.posts << p1 
+u1.posts << p1 << p5
 u2.posts << p2 << p3
 u3.posts << p4
 
+
 u1.comments << c1 << c5 << c9
-u2.comments << c2 << c7 << c8
-u3.comments << c3 << c4 << c6
+u2.comments << c2 << c7 << c8 << c11
+u3.comments << c3 << c4 << c6 << c12
+u4.comments << c10
+
+
 
 # Test the associations we just made:
 puts "Testing user -< posts associations:"
@@ -226,6 +266,7 @@ p1.categories << cat5
 p2.categories << cat3 << cat4
 p3.categories << cat1 << cat2
 p4.categories << cat1 << cat6 << cat7
+p5.categories << cat1
 
 # Test 
 

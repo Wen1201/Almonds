@@ -15,6 +15,8 @@
 
       <% if @current_user.present? %>
       Welcome, <%= @current_user.name %>
+      <%= link_to 'My Page', user_path(@current_user.id) %>
+      |
        <%= link_to 'Logout', login_path, method: 'delete' %>
       <% else %>
         <%= link_to 'Login', login_path %>
@@ -35,7 +37,7 @@
          <%= link_to 'Create Post', new_post_path %>
         <% end %>
         |
-        <%= link_to "All Catrgories", categories_index_path %>
+        <%= link_to "All Catrgories", categories_path %>
 
        <hr>
      </nav>
