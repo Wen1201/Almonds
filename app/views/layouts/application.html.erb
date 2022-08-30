@@ -38,6 +38,12 @@
         <% end %>
         |
         <%= link_to "All Catrgories", categories_path %>
+        |
+        <%= link_to "All Movies", movies_path %>
+         <% if @current_user.present? %>
+         |
+         <%= link_to 'Create A Movie', new_movie_path %>
+        <% end %>
 
        <hr>
      </nav>

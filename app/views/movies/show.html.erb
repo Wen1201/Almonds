@@ -1,0 +1,19 @@
+<h1><%= @movie.name %></h1>
+
+<h2>All Posts About This Movie</h2>
+
+
+
+
+
+
+<ul>
+<% @movie.posts.each do |p| %>
+  <li>
+    <%= link_to p.name, post_path(p.id) %>
+    
+  </li>
+<% end %>
+</ul>
+
+

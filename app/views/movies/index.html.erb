@@ -1,0 +1,10 @@
+<h1>Movies:</h1>
+
+<ul>
+<% @movies.each do |m| %>
+  <li>
+    <%= link_to m.name, movie_path(m.id)  %>
+  </li>
+<% end %>
+</ul>
+

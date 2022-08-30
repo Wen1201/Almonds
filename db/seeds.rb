@@ -235,6 +235,12 @@ m4 = Movie.create!(
     year: '1997'
 )
 
+m5 = Movie.create!(
+    name: 'Captain Amercia', 
+    image: 'https://m.media-amazon.com/images/M/MV5BMTYzOTc2NzU3N15BMl5BanBnXkFtZTcwNjY3MDE3NQ@@._V1_FMjpg_UX1000_.jpg',
+    year: '2011'
+)
+
 puts "created #{ Movie.count } movies."
 
 m1.posts << p1
@@ -259,6 +265,12 @@ cat4 = Category.create! name: 'Thriller'
 cat5 = Category.create! name: 'Black Comedy'
 cat6 = Category.create! name: 'Coming-of-age'
 cat7 = Category.create! name: 'Drama'
+cat8 = Category.create! name: 'Adventure'
+cat9 = Category.create! name: 'Musicals(Dance)'
+cat10 = Category.create! name: 'Science Fiction'
+cat11 = Category.create! name: 'Epics/Historical/Period'
+
+
 
 puts "created #{ Category.count} category."
 
