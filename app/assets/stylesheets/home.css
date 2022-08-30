@@ -1,0 +1,11 @@
+.home_image{
+    max-width: 20vw;
+
+}
+body {
+    background-color: black;
+  }
+
+#images {
+    display: none;
+}

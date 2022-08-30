@@ -195,12 +195,22 @@ u2.comments << c2 << c7 << c8 << c11
 u3.comments << c3 << c4 << c6 << c12
 u4.comments << c10
 
+u1.liked_posts << Post.first
+u2.liked_posts << Post.first
+u3.liked_posts << Post.first
+u4.liked_posts << Post.first
+
+
 
 
 # Test the associations we just made:
 puts "Testing user -< posts associations:"
 puts "  • the post '#{ Post.first.name }' is by #{ Post.first.user.name }"
 puts "  • the user #{ User.last.name } has the posts: #{ User.last.posts.pluck(:name).join(', ') }"
+
+puts "Testing user -< liked_posts associations:"
+puts "  • the liked_post '#{ Post.first.name }' is by #{ Post.first.user.name }"
+puts "  • the user #{ User.last.name } liked the posts: #{ User.last.liked_posts.pluck(:name).join(', ') }"
 
 puts "Testing user -< comments associations:"
 puts "  • the comment '#{Comment.first.comment }' is by #{ Comment.first.user.name }"
