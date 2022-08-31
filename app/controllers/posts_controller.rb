@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    
   end
 
   def show
@@ -52,6 +53,20 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def toggle_like
+    
+    @post = Post.find params[:id]
+    if @current_user.liked_posts.include?(@post)
+       # user already liked post , so unlike
+      @current_user.liked_posts.delete(@post)
+    else
+      # user doesn't like post yet, so like
+      @current_user.liked_posts << @post  
+    end
+    redirect_to @post
+
   end
 
    private

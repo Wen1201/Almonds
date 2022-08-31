@@ -11,15 +11,27 @@
 
 <%= form_with model: @post, local: true do |f| %>
 
-  <%= f.label :name %>
+  <%= f.label :caption %>
   <br>
   <%= f.text_field :name %>
+  <br>
+  <br>
+
+  <%= f.label :about %>
+  <br>
+  <%= f.text_area :about %>
   <br>
   <br>
 
   <%= f.label :image %>
   <br>
   <%= f.text_field :image %>
+  <br>
+  <br>
+
+  <%= f.label :movie %>
+  <br>
+  <%= f.text_field :movie %>
   <br>
   <br>
 

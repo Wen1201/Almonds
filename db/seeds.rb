@@ -96,6 +96,7 @@ Post.destroy_all
 
 p1 = Post.create!(
     name: 'You Never Can Tell', 
+    mind: '',
     image: 'https://live.staticflickr.com/7412/16546496046_7942e6b7e8_z.jpg'
 
 
@@ -124,6 +125,7 @@ p4 = Post.create!(
 
 p5 = Post.create!(
     name: 'End Game', 
+    mind: 'I was happy with this ending. I was wondering how they could possibly end the movie, but they found a really good note to end it on.',
     image: 'https://sportshub.cbsistatic.com/i/2021/03/16/5beecc02-4c79-4ccc-8bac-1affc93aebfa/avengers-4-ending-fan-art-captain-america-peggy-carter-1130869.jpg',
     
 
@@ -154,6 +156,7 @@ u1 = User.create!(
     name: 'Cantrous', 
     image: 'https://d1hjkbq40fs2x4.cloudfront.net/2016-07-16/files/cat-sample_1313-t.jpg',
     email: '123@gmail.com',
+    about: 'Hiii!!♡',
     password: 'chicken'
 
 )
@@ -162,6 +165,7 @@ u2 = User.create!(
     name: ' ARCUS1200', 
     image: 'https://i.pinimg.com/736x/bd/9c/93/bd9c931ca152a2323a4293ff5ad9846b.jpg',
     email: '234@gmail.com',
+    about: 'Self taught photographer based in the UK.',
     password: 'chicken'
 
 )
@@ -170,6 +174,7 @@ u3 = User.create!(
     name: 'Filledagreat', 
     image: 'https://i.pinimg.com/736x/e6/97/3d/e6973df7ecb61d2829f558e9012a8db0.jpg',
     email: '345@gmail.com',
+    about: ' Welcome! ~ movies, tv shows , music and quotes.',
     password: 'chicken'
 
 )
@@ -178,6 +183,7 @@ u4 = User.create!(
     name: 'Brandon Layne', 
     image: 'https://i.pinimg.com/736x/e6/97/3d/e6973df7ecb61d2829f558e9012a8db0.jpg',
     email: '1@gmail.com',
+    about: 'Let us reveal the soul of movies.',
     password: 'chicken'
 
 )
@@ -195,10 +201,10 @@ u2.comments << c2 << c7 << c8 << c11
 u3.comments << c3 << c4 << c6 << c12
 u4.comments << c10
 
-u1.liked_posts << Post.first
-u2.liked_posts << Post.first
-u3.liked_posts << Post.first
-u4.liked_posts << Post.first
+u1.liked_posts << p1
+u2.liked_posts << p2
+u3.liked_posts << p1 << p3
+u4.liked_posts << p4 << p2
 
 
 

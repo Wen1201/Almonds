@@ -4,7 +4,12 @@
 <% @categories.each do |cat| %>
   <li>
     <%= link_to cat.name, category_path(cat.id) %>
-    
+    <br>
+    <% cat.posts.each do|p| %>
+    <%= image_tag p.image, alt: p.name %>
+    <br>
+    <br>
+    <% end %>
   </li>
 <% end %>
 </ul>

@@ -11,26 +11,33 @@
   </em>
 </p>
 
+<p>
+<%= @post.mind %>
+</p>
 
 <% if @current_user.present? && @current_user.id == @post.user_id %>
   <%= link_to 'Edit', edit_post_path(@post) %>
 <% end %>
+<br>
 
-<p>
-  Post list here!
-</p>
+
 
 <% if @post.image.present? %>
   <%= image_tag @post.image, alt: @post.name %>
 <% end %>
-<button>like</button>
+
+<% if @current_user.liked_posts.include?(@post) %>
+  <%= button_to 'unlike', like_toggle_path(@post.id) %>
+<% else %>
+  <%= button_to 'like', like_toggle_path(@post.id) %>
+<% end %>
 
 <h3>
   Comments:
+  <br><br>
   <% @post.comments.each do |c| %>
-  <%= c.comment %> 
-  <br>
-  <%= link_to c.user.name, user_path(c.user)%><br><br>
+  <%= link_to c.user.name, user_path(c.user)%>  <%= c.comment %><br><br> 
+  
   <% end %>
 </h3>
 

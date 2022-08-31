@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_30_134546) do
+ActiveRecord::Schema.define(version: 2022_08_31_023417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2022_08_30_134546) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "movie_id"
+    t.text "mind"
   end
 
   create_table "posts_users", force: :cascade do |t|
@@ -71,6 +72,7 @@ ActiveRecord::Schema.define(version: 2022_08_30_134546) do
     t.datetime "updated_at", null: false
     t.text "password_digest"
     t.text "email"
+    t.text "about"
   end
 
   create_table "users_posts", force: :cascade do |t|

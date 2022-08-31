@@ -2,16 +2,15 @@
 
 <h2>All Posts About This Movie</h2>
 
-
-
-
-
-
 <ul>
 <% @movie.posts.each do |p| %>
   <li>
     <%= link_to p.name, post_path(p.id) %>
-    
+    (<%= link_to p.user.name, user_path(p.user) %>)
+    <br>
+    <%= image_tag p.image, alt: p.name %>
+    <br>
+    <br>  
   </li>
 <% end %>
 </ul>
