@@ -1,6 +1,6 @@
 
 <h2>Login</h2>
-
+<div class="create_post">
 <% if flash[:error] %>
 
     <br>
@@ -24,6 +24,7 @@
   <%= f.password_field :password %>
   <br><br>
 
-  <%= f.submit 'Login' %>
+  <%= f.submit'Login',class:"submit"%>
 
 <% end %>
+</div>

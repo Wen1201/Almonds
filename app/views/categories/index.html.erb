@@ -1,18 +1,22 @@
-<h1>All Categories</h1>
-<div class="post_many">
-    <ul>
-    <% @categories.each do |cat| %>
-    <li>
-        <%= link_to cat.name, category_path(cat.id) %>
-        <br>
-        <% cat.posts.each do|p| %>
-        <%= link_to (image_tag p.image, alt: p.name), post_path(p) %>
-        <br>
-        <br>
-        
-        <% end %>
-    </li>
+<h2> All categories</h2>
+
+
+<p>
+   Total: <%= pluralize(@categories.length, 'categories') %>
+</p>
+<div class="container">
+   
+    <% @categories.each do |cat| %> 
+    <div class="gallery-container w-1 h-2">
+       <div class="gallery-item"> 
+          <div class="image">
+            <%= link_to (image_tag cat.image, alt: cat.name), category_path(cat.id) %> 
+          </div>       
+          <div class="text">   
+            <%= cat.name %> 
+          </div>      
+       </div>  
+    </div> 
     <% end %>
-    </ul>
 </div>
 

@@ -1,14 +1,14 @@
 
 
 <% if @movie.errors.any? %>
-  <strong>Please correct the following:</strong>
+  <strong class="t">Please correct the following:</strong>
   <ul>
     <% @movie.errors.full_messages.each do |e| %>
       <li><%= e %></li>
     <% end %>
   </ul>
 <% end %>
-
+<div class="text">
 <%= form_with model: @movie, local: true do |f| %>
 
   <%= f.label :name %>
@@ -33,3 +33,4 @@
   <%= f.submit class:"submit"%>
 
 <% end %>
+</div>

@@ -1,7 +1,7 @@
 
 
 <% if @post.errors.any? %>
-  <strong>Please correct the following:</strong>
+  <strong class="t">Please correct the following:</strong>
   <ul>
     <% @post.errors.full_messages.each do |e| %>
       <li><%= e %></li>
@@ -17,9 +17,9 @@
   <br>
   <br>
 
-  <%= f.label :about %>
+  <%= f.label :'What is on your mind'%>
   <br>
-  <%= f.text_area :about %>
+  <%= f.text_area :mind %>
   <br>
   <br>
 
@@ -43,6 +43,6 @@
 
 
 
-  <%= f.submit class:"submit"%>
+  <%= f.submit :Create, class:"submit"%>
 
 <% end %>

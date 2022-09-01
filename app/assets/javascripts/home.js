@@ -35,6 +35,6 @@ $(function(){
    }; //end function imageSoup
    
 
-   setInterval(imageSoup, 700);
+   setInterval(imageSoup, 500);
 
 });

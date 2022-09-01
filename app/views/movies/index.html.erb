@@ -1,14 +1,23 @@
-<h1>Movies:</h1>
-<div class="post_many">
-<ul>
-<% @movies.each do |m| %>
-  <li>
-    <%= link_to m.name, movie_path(m.id)  %>
-    <br>
-    <%= link_to (image_tag m.image, alt: m.name),movie_path(m) %>  
-    
-  </li>
-<% end %>
-</ul>
+<h2> All Movies</h2>
+
+<p>
+   Total: <%= pluralize(@movies.length, 'movies') %>
+</p>
+
+<div class="movie-container">
+
+    <% @movies.each do |m| %>
+    <div class="gallery-container w-1 h-2"> 
+      <div class="gallery-item">
+        <div class="image">
+          <%= link_to (image_tag m.image, alt: m.name),movie_path(m) %>  
+        </div> 
+        <div class="text">
+          <%= m.name  %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
 </div>
 

@@ -27,15 +27,15 @@
  .nav-area {
     float: right;
     list-style: none;
-    margin-top: 3px;
-    padding-right: 130px;
+    margin-top: 39px;
+    padding-right: 273px;
 }
 
 .user {
     float: right;
     list-style: none;
-    margin-top: -56px;
-    padding-right: 130px;
+    margin-top: -7%;
+    margin-right: -2%;
 }
 
 .nav-area li {
@@ -67,14 +67,18 @@
     background: #fff;
     color: #333;
 }
-.user-p {
+.user img {
     /* max-width: 50px; */
     /* max-width: 15vw; */
     object-fit: cover;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-         
-     
+    margin-bottom: -7px;    
+}
+#almon{
+    color:aliceblue;
+    margin-left: -1007px;
+    font-size: 30px;
 }
 

@@ -1,8 +1,21 @@
 .user_image{
    /* max-width: 15vw; */
    object-fit: cover;
-   width: 230px;
-   height: 230px;
+   width: 90px;
+   height: 90px;
    border-radius: 50%;
+   margin-top: 5%;
     
 }
+
+.liked{
+   color:aliceblue;
+}
+.h{
+   color:red;
+   font-size: 30px;
+   margin-top: -4.3%;
+   margin-left: 7%;
+   
+ }
+

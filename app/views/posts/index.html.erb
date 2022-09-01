@@ -7,16 +7,19 @@
 </p>
 
 
-<div class="post_many">
-  <ul classs="text">
-  <% @posts.each do |post| %>    
-    <%= link_to (image_tag post.image, alt: post.name),post_path(post) %>
-      <%= link_to post.name, post_path(post)  %>
-      <br>
-      <%= link_to post.user.name, user_path(post.user) %>
-      <div id="user_p">
-      <%= link_to (image_tag post.user.image), user_path(post.user) %>
+<div class="container">
+
+      <% @posts.each do |post| %>    
+      <div class="gallery-container w-2 h-3"> 
+          <div class="gallery-item">
+            <div class="image">
+                <%= link_to (image_tag post.image, alt: post.name),post_path(post) %>
+            </div> 
+            <div class="text">  
+                <%= post.name  %>
+            </div>
+          </div>     
       </div>
-  <% end %>
-  </ul>
+      <% end %> 
+
 </div>

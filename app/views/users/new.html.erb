@@ -1,8 +1,8 @@
 
 <h2>Create Account</h2>
-
+<div class="create_post">
 <% if @user.errors.any? %>
-  <strong>Please correct the following errors:</strong>
+  <strong class="t">Please correct the following errors:</strong>
   <ul>
     <% @user.errors.full_messages.each do |e| %>
       <li><%= e %></li>
@@ -33,6 +33,7 @@
   <%= f.password_field :password_confirmation %>
   <br><br>
 
-  <%= f.submit %>
+  <%= f.submit class:"submit" %>
 
 <% end %>
+</div>
