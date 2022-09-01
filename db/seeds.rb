@@ -249,9 +249,9 @@ u4 = User.create!(
  puts "created #{ User.count } users."
 
 
-u1.posts << p1 << p5
-u2.posts << p2 << p3
-u3.posts << p4 << p9
+u1.posts << p1 << p5 << p6 << p10
+u2.posts << p2 << p3 << p7 << p11
+u3.posts << p4 << p9 << p8 << p12
 
 
 u1.comments << c1 << c5 << c9 << c6
@@ -403,6 +403,10 @@ m4.posts << p3
 m6.posts << p6
 m7.posts << p7
 m8.posts << p8
+m9.posts << p10
+m10.posts << p9
+m11.posts << p12
+m12.posts << p11
 
 puts "testing movie -< posts association:"
 puts " • the post '#{ Post.first.name }' is on the movie '#{ Post.first.movie.name }' "
