@@ -1,11 +1,12 @@
-/* .home_image{
+.home_image{
     max-width: 20vw;
+    z-index: -1000;
+    position: absolute;
+    display: none;
+    
 
 }
 body {
-    background-color: black;
+    /* background-color: black; */
   }
 
-#images {
-    display: none;
-} */

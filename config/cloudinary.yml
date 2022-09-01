@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dzn6micid
+  api_key: '267815315926734'
+  api_secret: f13klbUnyv2KBWJ-VwiW0hLl7tc
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dzn6micid
+  api_key: '267815315926734'
+  api_secret: f13klbUnyv2KBWJ-VwiW0hLl7tc
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dzn6micid
+  api_key: '267815315926734'
+  api_secret: f13klbUnyv2KBWJ-VwiW0hLl7tc
+  enhance_image_tag: true
+  static_file_support: false

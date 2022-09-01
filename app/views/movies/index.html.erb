@@ -1,14 +1,14 @@
 <h1>Movies:</h1>
-
+<div class="post_many">
 <ul>
 <% @movies.each do |m| %>
   <li>
     <%= link_to m.name, movie_path(m.id)  %>
     <br>
-   
-    
+    <%= link_to (image_tag m.image, alt: m.name),movie_path(m) %>  
     
   </li>
 <% end %>
 </ul>
+</div>
 

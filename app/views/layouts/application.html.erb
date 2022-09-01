@@ -10,50 +10,35 @@
   </head>
 
   <body>
-     <nav class="title">
-       <h1>movie music database</h1>
-
+       <h1>Database</h1>
+      
+     <div class="header">
+      <ul class="user">
       <% if @current_user.present? %>
-      Welcome, <%= @current_user.name %>
-      <%= link_to 'My Page', user_path(@current_user.id) %>
-      |
-       <%= link_to 'Logout', login_path, method: 'delete' %>
+      <%= image_tag @current_user.image, class:"user-p"%>
+          <li><%= link_to @current_user.name, user_path(@current_user.id) %></li>
+          <li><%= link_to 'Logout', login_path, method: 'delete' %></li>
       <% else %>
-        <%= link_to 'Login', login_path %>
-        |
-        <%= link_to 'Sign Up', new_user_path %>
+          <li><%= link_to 'Login', login_path %></li>
+          <li><%= link_to 'Sign Up', new_user_path %></li>
       <% end %>
-    
-
-       |
-
-       <br>
-
-       <%= link_to 'Home', root_path %>
-       |
-       <%= link_to 'All Posts', posts_path %>
-        <% if @current_user.present? %>
-         |
-         <%= link_to 'Create Post', new_post_path %>
-        <% end %>
-        |
-        <%= link_to "All Catrgories", categories_path %>
-        |
-        <%= link_to "All Movies", movies_path %>
-         <% if @current_user.present? %>
-         |
-         <%= link_to 'Create A Movie', new_movie_path %>
-        <% end %>
-
-       <hr>
-     </nav>
+      </ul>
+        <ul class="nav-area">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'All Posts', posts_path %></li>
+      <% if @current_user.present? %>
+          <li><%= link_to 'Create Post', new_post_path %></li>
+      <% end %>
+          <li><%= link_to "All Catrgories", categories_path %></li>
+          <li><%= link_to "All Movies", movies_path %></li>
+      <% if @current_user.present? %>
+          <li><%= link_to 'Create A Movie', new_movie_path %></li>
+      <% end %>
+        </ul>
+      
+     </div>
 
     <%= yield %>
-
-    <footer>
-    &copy; Music 2022
-    </footer>
-
 
   </body>
 </html>

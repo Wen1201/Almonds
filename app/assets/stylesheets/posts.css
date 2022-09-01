@@ -1,0 +1,92 @@
+.un-heart{
+    width: 40px;
+    height: 35px;
+    font-size: 30px;
+    color: gray;
+    border: none;
+    background-color: transparent;
+}
+.heart {
+    /* box-shadow: 0 10px 25px rgba(0,0,0,0.4); */
+    width: 40px;
+    height: 35px;
+    font-size: 30px;
+    color: rgb(237, 39, 39);
+    background-color: transparent;
+    /* background-repeat:no-repeat; */
+    border: none;
+    /* cursor:pointer; */
+    /* overflow: hidden;  */
+    
+}
+.time{
+    font-size: 0.8em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+body{
+    /* background: url("background2.jpg"); */
+    background-color: black;
+    background-size: cover;
+    /* background-position: center center; */
+    position: relative;
+}
+
+.header {
+    color:aqua;
+}
+
+.post_many {
+    column-count: 3;
+    column-gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;  
+}
+.post_many img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.post_many #user_p{
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.create_post {
+    /* background-color: aliceblue; */
+    padding-left: 45%;
+}
+
+.create_post h2{
+    color:#f2312e;
+}
+
+.create_post form,select {
+    opacity: 0.8;
+    font-family: 'Open Sans', sans-serif;
+    /* box-shadow: 0 10px 25px rgba(0,0,0,0.2); */
+    font-size: 0.9rem;
+    padding: 0.4em 1.8em 0.4em 0.5em;
+    color: #f2312e;
+    border: 0;
+}
+
+.create_post form,.submit{
+    opacity: 0.8;
+    font-family: 'Open Sans', sans-serif;
+    /* box-shadow: 0 10px 25px rgba(0,0,0,0.2); */
+    font-size: 0.9rem;
+    padding: 0.4em 1.8em 0.4em 0.5em;
+    color: #f2312e;
+    border: 0;
+}
+
+.create_post form,.text_form{
+    margin:0 auto;
+    position: absolute;
+}

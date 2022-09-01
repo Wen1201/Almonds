@@ -1,15 +1,9 @@
-
+<div class="post-body">
 <h2>
   Post: <%= @post.name %>
 </h2>
 
-<p>
-  <em>
-    Last updated <%= time_ago_in_words(@post.updated_at) %> ago
-    <br>
-    Last Updated at <%= @post.updated_at.strftime '%A %e %b, %Y %l:%M%P' %>
-  </em>
-</p>
+
 
 <p>
 <%= @post.mind %>
@@ -20,17 +14,25 @@
 <% end %>
 <br>
 
-
-
 <% if @post.image.present? %>
   <%= image_tag @post.image, alt: @post.name %>
 <% end %>
 
 <% if @current_user.liked_posts.include?(@post) %>
-  <%= button_to 'unlike', like_toggle_path(@post.id) %>
+  <%= button_to '♥', like_toggle_path(@post.id),class:"un-heart" %>
 <% else %>
-  <%= button_to 'like', like_toggle_path(@post.id) %>
+  <%= button_to '♥', like_toggle_path(@post.id), class:"heart" %>
 <% end %>
+
+<p class="time">
+  <em>
+    Last updated <%= time_ago_in_words(@post.updated_at) %> ago
+    <br>
+    Last Updated at <%= @post.updated_at.strftime '%A %e %b, %Y %l:%M%P' %>
+  </em>
+</p>
+
+
 
 <h3>
   Comments:
@@ -51,6 +53,7 @@
  
 
  <br>
+ <div>
 
 
 

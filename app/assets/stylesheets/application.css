@@ -15,3 +15,66 @@
 
  *= require_self
  */
+
+ .header {
+    width: 1170px;
+    margin: auto;
+    z-index: 100;
+    
+  
+ }
+
+ .nav-area {
+    float: right;
+    list-style: none;
+    margin-top: 3px;
+    padding-right: 130px;
+}
+
+.user {
+    float: right;
+    list-style: none;
+    margin-top: -56px;
+    padding-right: 130px;
+}
+
+.nav-area li {
+    display: inline-block;
+}
+.user li {
+    display: inline-block;
+}
+
+.nav-area li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+.user li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+.nav-area li a:hover{
+    background: #fff;
+    color: #333;
+}
+
+.user li a:hover{
+    background: #fff;
+    color: #333;
+}
+.user-p {
+    /* max-width: 50px; */
+    /* max-width: 15vw; */
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+         
+     
+}
+
