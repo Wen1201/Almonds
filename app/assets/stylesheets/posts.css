@@ -44,6 +44,20 @@ body{
     color: #333;
 }
 
+.post_user_name{
+    color:rgb(195, 191, 191);
+    /* background-color: transparent;
+    border: none;
+    font-size: 10px; */
+    text-decoration: none;
+    padding: 3px 8px;
+    font-size: 14px;
+}
+.post_user_name:hover{
+    background: #fff;
+    color: #333;
+}
+
 .un-heart{
     width: 40px;
     height: 35px;
@@ -72,6 +86,9 @@ body{
     font-size: 10px;
     
 }
+
+
+
 .time{
     font-size: 0.8em;
 }
