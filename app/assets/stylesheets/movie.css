@@ -1,0 +1,12 @@
+#movie-show-text a{
+    color:aliceblue;
+    text-decoration: none;
+    padding: 3px 8px;
+    font-size: 14px;
+    
+}
+
+#movie-show-text a:hover{
+    background: #fff;
+    color: #333;
+}

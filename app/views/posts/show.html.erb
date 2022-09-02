@@ -17,7 +17,10 @@
 </div>
 
 <%= link_to @post.user.name, user_path(@post.user), class:"post_user_name"%>
-
+<%= link_to @post.movie.name, movie_path(@post.movie),class:"post_user_name" %>
+<% @post.categories.each do |c|%>
+<%= link_to c.name, category_path(c), class:"post_user_name"%>
+<% end %>
 <% if @current_user.liked_posts.include?(@post) %>
   <%= button_to '♥', like_toggle_path(@post.id),class:"un-heart" %>
 <% else %>
