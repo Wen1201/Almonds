@@ -1,5 +1,5 @@
 # Almonds Movie Discussion Boards
-![alt text](images/screenshot1.png)
+![alt text](app/assets/images/screenshot1.png)
 ![alt text](images/screenshot2.png)
 ![alt text](images/screenshot3.png)
 Almonds is my second project after studying Ruby Rails for 2 weeks.
