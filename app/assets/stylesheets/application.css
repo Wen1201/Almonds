@@ -35,7 +35,7 @@
     float: right;
     list-style: none;
     margin-top: -7%;
-    margin-right: -2%;
+    margin-right: 6%;
 }
 
 .nav-area li {
@@ -78,7 +78,11 @@
 }
 #almon{
     color:aliceblue;
-    margin-left: -1007px;
+    margin-right: 85.5%;
     font-size: 30px;
+}
+.let{
+    color:#fff;
+    margin-left: 0;
 }
 

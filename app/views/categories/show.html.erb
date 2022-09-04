@@ -1,3 +1,4 @@
+<% if @current_user.present? %>
 <h1><%= @category.name %></h1>
 
 <p>
@@ -17,3 +18,6 @@ Posts
   </div>
   <% end %>
 </div>
+<% else %>
+  <p class="please"> Please <%= link_to 'Login', login_path%> or <%= link_to 'Sign Up', new_user_path %> to start.....</p>
+<% end %>

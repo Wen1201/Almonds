@@ -9,31 +9,33 @@
     <% end %>
   </ul>
 <% end %>
-
+<div class="container">
 <%= form_with model: @user, local: true do |f| %>
-
+<h1>Welcome</h1>
+<div class="all-form">
   <%= f.label :name %>
   <br>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class:"field" %>
   <br><br>
   
   <%= f.label :email %>
   <br>
-  <%= f.text_field :email %>
+  <%= f.text_field :email, class:"field" %>
   <br><br>
   
   <%= f.label :password %>
   <br>
-  <%= f.password_field :password %>
+  <%= f.password_field :password, class:"field" %>
   
   <br><br>
 
   <%= f.label :password_confirmation %>
   <br>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password_confirmation, class:"field" %>
   <br><br>
 
-  <%= f.submit class:"submit" %>
-
+  <%= f.submit'Sign Up', class:"submit" %>
+</div>
 <% end %>
+</div>
 </div>

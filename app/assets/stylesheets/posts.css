@@ -6,32 +6,70 @@ body{
     /* position: relative; */
     margin: 20px;
     padding: 0;
+    /* text-align: center; */
+}
+.post-show-container{
+   /* text-align: center; */
+}
+.post_photo{
+    position: relative;
+    text-align: center;
+}
+.post-text{ 
+    margin-left: 22%;
+    padding: 30px 0 30px 0;
+    /* position: relative;    */
+    margin-right: 22%;
+}
+
+.user-container{
+    text-align: center;
+    
+}
+.post-heart{
     text-align: center;
 }
 
-.post-text{
-    
-    padding: 10px 80px;
-
+.time{
+    font-size: 0.8em;
+    margin-left: 22%;
 }
-.comment-text{
-    
+
+.comment-text{ 
     font-size: 10px;
 }
+
+.comment-text h3{
+    margin-left: 22%;
+    font-size: 15px;
+    margin-top: 9%;
+}
+
 .comment-item{
     position: relative;
 }
-.comment-item a{
+.comment-user{
+    margin-left: 53%;
+}
+.comment-user a{
     color: #fff;
     text-decoration: none;
     padding: 5px 15px;
     font-size: 14px;
     margin-left: -68%;
 }
-.comment-item a:hover{
+.comment-user a:hover{
     background: #fff;
     color: #333;
 }
+
+.ccc{
+    padding-left:0px;
+    margin-left: 21.5%;
+    font-size: 15px;
+    padding: 10px;
+}
+
 .edit {
     color: #fff;
     text-decoration: none;
@@ -66,6 +104,9 @@ body{
     border: none;
     background-color: transparent;
 }
+.un-heart:hover{
+    font-size: 35px;
+}
 .heart {
     /* box-shadow: 0 10px 25px rgba(0,0,0,0.4); */
     width: 40px;
@@ -76,8 +117,10 @@ body{
     /* background-repeat:no-repeat; */
     border: none;
     /* cursor:pointer; */
-    /* overflow: hidden;  */
-    
+    /* overflow: hidden;  */   
+}
+.heart:hover{
+    font-size: 35px;
 }
 .edit{
     color:rgb(195, 191, 191);
@@ -89,9 +132,7 @@ body{
 
 
 
-.time{
-    font-size: 0.8em;
-}
+
 
 
 .header {
@@ -143,6 +184,7 @@ body{
     transition: .3s ease-in-out;
     -webkit-backdrop-filter: blur(5px) saturate(1.8);
     backdrop-filter: blur(5px) saturate(1.8);
+    text-align: center;
 
 }
 
@@ -218,12 +260,83 @@ body{
 .create_post {
     /* background-color: aliceblue; */
     padding-left: 41%;
-    padding-top: 13%;
+    padding-top: 9%;
 }
 
-.create_post h2{
-    color:#f2312e;
+
+.container h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transition: 1s ease-in-out;
+    margin-left: 21%;
 }
+.all-form{
+    margin-left: 15%;
+    opacity: 1;
+    transition: opacity 0.5s;
+    
+}
+
+.all-form .field{
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 200px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    color:#fff;
+    font-size: 15px;
+    transition: 0.25s;
+}
+.all-form .field::placeholder{
+    color:black;
+    font-size: 14px;
+    font-weight: 300;
+}
+.all-form .field:hover{
+    background-color: #7c7b7b;
+}
+.all-form .field:focus{
+    background-color: rgb(0, 0, 0);
+    width: 250px;
+}
+.all-form .submit{
+    outline: none;
+    background-color: #fff;
+    color:#333;
+    border: none;
+    width: 230px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+    
+}
+.all-form .submit:hover{
+    background-color: #7c7b7b;
+}
+.all-form .comment-submit{
+    outline: none;
+    background-color: #fff;
+    color:#333;
+    border: none;
+    width: 100px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.all-form .comment-submit:hover{
+    background-color: #7c7b7b;
+}
+
 
 .create_post form,select {
     opacity: 1;
@@ -234,6 +347,8 @@ body{
     color: #6d6a6a;
     border: 0;
 }
+
+
 
 .create_post form,.submit{
     opacity: 1;
@@ -279,17 +394,23 @@ body{
     color:#fff;
     margin-left: -82%;
 }
-.ccc{
-    padding-left:0px;
-    margin-left: -16%;
-    font-size: 15px;
-    padding: 10px;
-}
-.Comm{
-    margin-left: -68%;
-    font-size: 15px;
-    margin-top: 9%;
-}
+
+
 .add-comment{
-    margin-left: -50%;
+    margin-left: 7%;
+}
+.please{
+    text-align: center;
+    color:#fff;
+    margin-top: 20%;
+}
+.please a{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+.please a:hover{
+    background: #fff;
+    color: #333;
 }

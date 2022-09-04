@@ -1,62 +1,67 @@
-
+<% if @current_user.present? %>
 <h2>
   Post: <%= @post.name %>
 </h2>
 
 <br>
-
+<div class="post-show-container">
 <div class="c">
-<div class="post_photo">
-<% if @post.image.present? %>
-  <%= image_tag @post.image, alt: @post.name %>
-<% end %>
+  <div class="post_photo">
+  <% if @post.image.present? %>
+    <%= image_tag @post.image, alt: @post.name %>
+  <% end %>
+  </div>
+
+  <div class="post-text">
+  <%= @post.mind %>
+  </div>
+<div>
+<div class="user-container">
+  <%= link_to @post.user.name, user_path(@post.user), class:"post_user_name"%>
+  <%= link_to @post.movie.name, movie_path(@post.movie),class:"post_user_name" %>
+  <% @post.categories.each do |c|%>
+  <%= link_to c.name, category_path(c), class:"post_user_name"%>
+  <% end %>
 </div>
 
-<div class="post-text">
-<%= @post.mind %>
+<div class="post-heart">
+  <% if @current_user.liked_posts.include?(@post) %>
+    <%= button_to '♥', like_toggle_path(@post.id),class:"un-heart" %>
+  <% else %>
+    <%= button_to '♥', like_toggle_path(@post.id), class:"heart" %>
+  <% end %>
 </div>
 
-<%= link_to @post.user.name, user_path(@post.user), class:"post_user_name"%>
-<%= link_to @post.movie.name, movie_path(@post.movie),class:"post_user_name" %>
-<% @post.categories.each do |c|%>
-<%= link_to c.name, category_path(c), class:"post_user_name"%>
-<% end %>
-
-<% if @current_user.liked_posts.include?(@post) %>
-  <%= button_to '♥', like_toggle_path(@post.id),class:"un-heart" %>
-<% else %>
-  <%= button_to '♥', like_toggle_path(@post.id), class:"heart" %>
-<% end %>
-
-<p class="time">
+<div class="time">
   <em>
     Last updated <%= time_ago_in_words(@post.updated_at) %> ago
     <br>
     Last Updated at <%= @post.updated_at.strftime '%A %e %b, %Y %l:%M%P' %>
   </em>
-</p>
-
 <% if @current_user.present? && @current_user.id == @post.user_id %>
   <%= link_to 'Edit', edit_post_path(@post), class:"edit" %>
 <% end %>
+</div>
 
 <div class="comment-text">
-<h3 class="Comm">
+<h3>
   Comments:
 </h3>
  <div class="add-comment">
+ <div class="all-form">
   <%= form_with model: @comment, local: true do |f| %>
     <%= f.hidden_field :post_id, value: @post.id %>
     <%= f.label :+ %>
-    <%= f.text_field :comment %>  <%= f.submit 'Add a comment' %> 
+    <%= f.text_field :comment,class:"field" %>  <%= f.submit 'Submit', class:"comment-submit"%> 
   <% end %>
+  </div>
   </div>
 
   <br><br>
   <div class="comment-item">
     <% @post.comments.each do |c| %>
-    <div class="">
-      <%= link_to c.user.name, user_path(c.user)%> 
+    <div class="comment-user">
+      <%= link_to c.user.name, user_path(c.user)%>
     </div>
     <div class="ccc">
       <%= c.comment %> 
@@ -66,6 +71,9 @@
 
 </div>
 </div>
+<% else %>
+  <p class="please"> Please <%= link_to 'Login', login_path%> or <%= link_to 'Sign Up', new_user_path %> to start.....</p>
+<% end %>
 
 
  

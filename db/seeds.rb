@@ -121,7 +121,7 @@ p2 = Post.create!(
 p3 = Post.create!(
     name: 'My Heart Will Go On', 
     mind: "This was my girlfriend at the time, and my first movie to see together when we were dating in 1997. She has now been my wife for 22 years. This song/movie will always have a special place in my heart. In my opinion, this will forever be the best song/movie combo. They don't make them like this anymore",
-    image: 'https://cdn.pastemagazine.com/www/articles/Titanic-header.jpg'
+    image: 'https://variety.com/wp-content/uploads/2016/03/titanic-anniversary.jpg?w=681&h=383&crop=1'
     
 
 )
@@ -136,7 +136,7 @@ p4 = Post.create!(
 
 p5 = Post.create!(
     name: 'End Game', 
-    mind: "It was a pleasure to realize, once 'Captain America: The First Avenger' got under way, that hey, here is a real movie, not a noisy assembly of incomprehensible special effects. Of course it's loaded with CGI. It goes without saying it's preposterous. But it has the texture and takes the care to be a full-blown film. You know, like with a hero we care about and who has some dimension. And with weight to the story. As we plunge ahead into a limitless future of comic-book movies, let this be an inspiration rather than 'Thor' or 'Green Lantern'.The words 'The First Avenger' are fraught with significance for Marvel fans. We have already had films inspired by Iron Man, the Hulk and Thor. Still to come, without doubt, are Ant-Man and Wasp. This film opens with the discovery of an enormous flying wing embedded in polar ice, and when a gloved hand reaches out to brush away the ice on a window, why, there's Captain America's shield! This film's plot involves his origin story and adventures during World War II, and I'm sure we'll discover in sequels that he was revived after the cryogenic nap to crusade again in the new day.We open with an archetypal 90-pound weakling; comic books of that period featured ads showing muscle men kicking sand into the face of such specimens, who were advised to mail-order Charles Atlas for body-building help. Young Steve Rogers  is a puny Brooklyn kid who is routinely beat upon by bullies; he dreams of joining the Army and defending America against the Nazis. Turned down as 4-F, he tries again and again to enlist, and eventually makes it into basic training, where he's always falling off the rope and bringing up the rear.",
+    mind: "It was a pleasure to realize, once 'Captain America: The First Avenger' got under way, that hey, here is a real movie, not a noisy assembly of incomprehensible special effects. Of course it's loaded with CGI. It goes without saying it's preposterous. But it has the texture and takes the care to be a full-blown film. You know, like with a hero we care about and who has some dimension. And with weight to the story. As we plunge ahead into a limitless future of comic-book movies, let this be an inspiration rather than 'Thor' or 'Green Lantern'.The words 'The First Avenger' are fraught with significance for Marvel fans. We have already had films inspired by Iron Man, the Hulk and Thor. Still to come, without doubt, are Ant-Man and Wasp. This film opens with the discovery of an enormous flying wing embedded in polar ice, and when a gloved hand reaches out to brush away the ice on a window, why, there's Captain America's shield! ",
     image: 'https://sportshub.cbsistatic.com/i/2021/03/16/5beecc02-4c79-4ccc-8bac-1affc93aebfa/avengers-4-ending-fan-art-captain-america-peggy-carter-1130869.jpg',
     
 
@@ -165,7 +165,7 @@ p8 = Post.create!(
 p9 = Post.create!(
     name: "We had today", 
     mind: "Whenever I hear this I picture the darkest of nights and then a slow sunrise over the water. And it's beautiful when you think of how many seconds of beauty we have the privilege of seeing each and every day. Life is so unpredictable especially now...so I'm trying to love today and all the beautiful moments it entails. This is a big year of lasts for me. But I am forever thankful for all the days I've spent here, with all the people in my life. Who knows what we have to look forward to but to have something to cherish from before and love right now? That's priceless. ",
-    image: 'https://pyxis.nymag.com/v1/imgs/05a/985/89b79dbbb1602f33ce8d37eb07fa906aeb-19-oneday.jpg',
+    image: 'https://i.pinimg.com/236x/18/80/15/18801570e42aa33bfd33b2958f1ac1ae--dexter-one-day.jpg',
     
 )
 p10 = Post.create!(
@@ -249,8 +249,8 @@ u4 = User.create!(
  puts "created #{ User.count } users."
 
 
-u1.posts << p1 << p5 << p6 << p10
-u2.posts << p2 << p3 << p7 << p11
+u1.posts << p1 << p5 << p6 << p10 << p3
+u2.posts << p2 << p7 << p11
 u3.posts << p4 << p9 << p8 << p12
 
 

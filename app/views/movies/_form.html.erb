@@ -9,28 +9,26 @@
   </ul>
 <% end %>
 <div class="text">
+<div class="container">
 <%= form_with model: @movie, local: true do |f| %>
 
+<div class="all-form">
   <%= f.label :name %>
   <br>
-  <%= f.text_field :name %>
+  <%= f.text_field :name,class:"field" %>
   <br>
   <br>
 
   <%= f.label :poster %>
   <br>
-  <%= f.text_field :image %>
-  <br>
-  <br>
-
-  <%= f.label :category %>
-  <br>
-  <%= f.select(:object_field, ['Romance', 'Disaster','Action', 'Thriller', 'Black Comedy', 'Coming-of-age', 'Drama']) %>
+  <%= f.text_field :image, placeholder:"URL",class:"field" %>
   <br>
   <br>
 
 
-  <%= f.submit class:"submit"%>
-
+  <%= f.submit'Submit', class:"submit"%>
+</div>
 <% end %>
+</div>
+</div>
 </div>

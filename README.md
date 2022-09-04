@@ -1,24 +1,28 @@
-# README
+# Almonds Movie Discussion Boards
+![alt text](images/screenshot1.png)
+![alt text](images/screenshot2.png)
+![alt text](images/screenshot3.png)
+Almonds is my second project after studying Ruby Rails for 2 weeks.
+This website is for people to discuss movies and share their thoughts about movies.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Author: 
+Wen Gong
 
-Things you may want to cover:
+## Link:
 
-* Ruby version
+## Login Details
+Email: 123@gmail.com
+Password: chicken
 
-* System dependencies
+## Tech used: 
+* Ruby on Rails 
+* HTML 
+* jQuery
+* CSS
+* javascript
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Wish List
+* search bar
+* follower and following
+* link to Spotify
+* 
