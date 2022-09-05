@@ -108,16 +108,12 @@ body{
     font-size: 35px;
 }
 .heart {
-    /* box-shadow: 0 10px 25px rgba(0,0,0,0.4); */
     width: 40px;
     height: 35px;
     font-size: 30px;
     color: gray;
     background-color: transparent;
-    /* background-repeat:no-repeat; */
-    border: none;
-    /* cursor:pointer; */
-    /* overflow: hidden;  */   
+    border: none; 
 }
 .heart:hover{
     font-size: 35px;
@@ -126,14 +122,8 @@ body{
     color:rgb(195, 191, 191);
     background-color: transparent;
     border: none;
-    font-size: 10px;
-    
+    font-size: 10px;   
 }
-
-
-
-
-
 
 .header {
     color:aqua;
@@ -145,7 +135,6 @@ body{
     grid-auto-rows: 100px, 300px;
     grid-gap: 20px;
     grid-auto-flow: dense;
-
 }
 
 .gallery-item{
@@ -157,7 +146,6 @@ body{
     width: 100%;
     height: 100%;
     overflow: hidden;
-
 }
 .gallery-item .image img{
     width: 100%;
@@ -185,7 +173,6 @@ body{
     -webkit-backdrop-filter: blur(5px) saturate(1.8);
     backdrop-filter: blur(5px) saturate(1.8);
     text-align: center;
-
 }
 
 .gallery-item:hover .text{
@@ -193,7 +180,6 @@ body{
     animation: move-down .3s linear;
     padding: 1em;
     width: 100%;
-
 }
 
 .w-1{
@@ -254,11 +240,7 @@ body{
     }
 }
 
-
-
-
 .create_post {
-    /* background-color: aliceblue; */
     padding-left: 41%;
     padding-top: 9%;
 }
@@ -276,8 +258,7 @@ body{
 .all-form{
     margin-left: 15%;
     opacity: 1;
-    transition: opacity 0.5s;
-    
+    transition: opacity 0.5s;   
 }
 
 .all-form .field{
@@ -315,8 +296,7 @@ body{
     border-radius: 3px;
     font-size: 15px;
     cursor: pointer;
-    transition: 0.25s;
-    
+    transition: 0.25s;  
 }
 .all-form .submit:hover{
     background-color: #7c7b7b;
@@ -341,26 +321,20 @@ body{
 .create_post form,select {
     opacity: 1;
     font-family: 'Open Sans', sans-serif;
-    /* box-shadow: 0 10px 25px rgba(0,0,0,0.2); */
     font-size: 0.9rem;
     padding: 0.4em 1.8em 0.4em 0.5em;
     color: #6d6a6a;
     border: 0;
 }
-
-
 
 .create_post form,.submit{
     opacity: 1;
     font-family: 'Open Sans', sans-serif;
-    /* box-shadow: 0 10px 25px rgba(0,0,0,0.2); */
     font-size: 0.9rem;
     padding: 0.4em 1.8em 0.4em 0.5em;
     color: #6d6a6a;
     border: 0;
 }
-
-
 
 .create_post form,.text_form{
     margin:0 auto;
@@ -394,7 +368,6 @@ body{
     color:#fff;
     margin-left: -82%;
 }
-
 
 .add-comment{
     margin-left: 7%;

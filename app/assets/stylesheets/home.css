@@ -2,11 +2,8 @@
     max-width: 30vw;
     z-index: -1000;
     position: absolute;
-    display: none;
-    
+    display: none;   
 
 }
-body {
-    /* background-color: black; */
-  }
+
 

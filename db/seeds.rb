@@ -18,34 +18,25 @@ c1 = Comment.create!(
 c2 = Comment.create!(
     comment: '" he died for her, she lived for him", 
     -Titanic', 
-    image: 'https://stayhipp.com/wp-content/uploads/2020/04/shy.jpg'
-    
+    image: 'https://stayhipp.com/wp-content/uploads/2020/04/shy.jpg'   
 )
 
 c3 = Comment.create!(
     comment: 'The saddest part of life is when the person who gave you the best memories, becomes a memory', 
-    image: 'https://stayhipp.com/wp-content/uploads/2020/04/shy.jpg'
-    
+    image: 'https://stayhipp.com/wp-content/uploads/2020/04/shy.jpg'  
 )
 
 c4 = Comment.create!(
     comment: 'everything about this movie is just so iconic, the lines, the scenes, the cinematography, the music, the clothes, the actors themselves... its a piece of art', 
-    image: 'https://stayhipp.com/wp-content/uploads/2020/04/shy.jpg'
-    
+    image: 'https://stayhipp.com/wp-content/uploads/2020/04/shy.jpg'  
 )
 
 c5 = Comment.create!(
-    comment: ' The final scene where Mathilda plants Leon favorite plant as Sting sings "Shape of My Heart" will bring tears to your eyes.....'
-    
-    
+    comment: ' The final scene where Mathilda plants Leon favorite plant as Sting sings "Shape of My Heart" will bring tears to your eyes.....'  
 )
 
-
-
 c6 = Comment.create!(
-    comment: 'This movie is a masterpiece, hands down. The soundtrack fits just perfectly. And as a non LGBTQ guy, it hits me deep. The monologue of the father at the very end of the movie is mindblowing. ' 
-    
-    
+    comment: 'This movie is a masterpiece, hands down. The soundtrack fits just perfectly. And as a non LGBTQ guy, it hits me deep. The monologue of the father at the very end of the movie is mindblowing. '    
 )
 
 c7 = Comment.create!(
@@ -161,7 +152,7 @@ p8 = Post.create!(
 )
 p9 = Post.create!(
     name: "We had today", 
-    mind: "Whenever I hear this I picture the darkest of nights and then a slow sunrise over the water. And it's beautiful when you think of how many seconds of beauty we have the privilege of seeing each and every day. Life is so unpredictable especially now...so I'm trying to love today and all the beautiful moments it entails. This is a big year of lasts for me. But I am forever thankful for all the days I've spent here, with all the people in my life. Who knows what we have to look forward to but to have something to cherish from before and love right now? That's priceless. ",
+    mind: "Whenever I hear this I picture the darkest of nights and then a slow sunrise over the water. And it's beautiful when you think of how many seconds of beauty we have the privilege of seeing each and every day. Life is so unpredictable especially now...",
     image: 'https://i.pinimg.com/236x/18/80/15/18801570e42aa33bfd33b2958f1ac1ae--dexter-one-day.jpg',
     
 )
@@ -181,7 +172,7 @@ p11 = Post.create!(
 
 p12 = Post.create!(
     name: "Remember me", 
-    mind: "It’s truly hard to believe that 1.4 thousand people who would be inclined to vote down a gorgeous song like this would bother to visit it here.  “Coco” has become my all-time favorite animated movie, and this version of the theme—the closing credits version—couldn’t be more beautiful.",
+    mind: "It’s truly hard to believe that 1.4 thousand people who would be inclined to vote down a gorgeous song like this would bother to visit it here.",
     image: 'https://imageio.forbes.com/blogs-images/robcain/files/2017/11/Coco.jpg?format=jpg&width=960',
     
 )
@@ -194,12 +185,6 @@ p2.comments << c4 << c5 << c13
 p3.comments << c1 << c2 << c3
 p4.comments << c6 << c7
 p5.comments << c10 << c11 << c12
-
-puts "Testing Post -< comments association:"
-puts " • the comment '#{ Comment.first.comment }' is on the post #{ Comment.first.post.name } "
-puts " • the post '#{ Post.last.name }' has the comments: #{ Post.last.comments.pluck(:comment).join(', ') }"
-
-
 
 ###########################
 
@@ -220,7 +205,6 @@ u2 = User.create!(
     name: ' ARCUS1200', 
     image: 'https://i.pinimg.com/736x/bd/9c/93/bd9c931ca152a2323a4293ff5ad9846b.jpg',
     email: '234@gmail.com',
-    about: 'Self taught photographer based in the UK.',
     password: 'chicken'
 
 )
@@ -229,7 +213,6 @@ u3 = User.create!(
     name: 'Filledagreat', 
     image: 'https://i.pinimg.com/736x/e6/97/3d/e6973df7ecb61d2829f558e9012a8db0.jpg',
     email: '345@gmail.com',
-    about: ' Welcome! ~ movies, tv shows , music and quotes.',
     password: 'chicken'
 
 )
@@ -238,7 +221,6 @@ u4 = User.create!(
     name: 'Brandon Hay', 
     image: 'https://i.pinimg.com/736x/e6/97/3d/e6973df7ecb61d2829f558e9012a8db0.jpg',
     email: '1@gmail.com',
-    about: 'Let us reveal the soul of movies.',
     password: 'chicken'
 
 )
@@ -262,20 +244,6 @@ u3.liked_posts << p1 << p3 << p5 << p6
 u4.liked_posts << p4 << p2 << p9 << p7
 
 
-
-
-# Test the associations we just made:
-puts "Testing user -< posts associations:"
-puts "  • the post '#{ Post.first.name }' is by #{ Post.first.user.name }"
-puts "  • the user #{ User.last.name } has the posts: #{ User.last.posts.pluck(:name).join(', ') }"
-
-puts "Testing user -< liked_posts associations:"
-puts "  • the liked_post '#{ Post.first.name }' is by #{ Post.first.user.name }"
-puts "  • the user #{ User.last.name } liked the posts: #{ User.last.liked_posts.pluck(:name).join(', ') }"
-
-puts "Testing user -< comments associations:"
-puts "  • the comment '#{Comment.first.comment }' is by #{ Comment.first.user.name }"
-puts "  • the user #{ User.last.name } has the comments: #{ User.last.comments.pluck(:comment).join(', ') }"
 
 #############################
 print "Creating movies... "
