@@ -1,4 +1,7 @@
 
+
+
+
 $(function(){
    console.log("hello");
 
@@ -7,7 +10,7 @@ $(function(){
   }
 
   const getRandomElementFromArray = function(array) {
-    const randomInt = getRandomInt(array.length)
+    let randomInt = getRandomInt(array.length)
     return array[randomInt]
   }
 
