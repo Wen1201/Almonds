@@ -90,9 +90,6 @@ c13 = Comment.create!(
     comment:"At that time, Natalie had problems with crying on command. So the crew sprayed peppermint water on her eyes to help her cry on set."
 )
 
-c14 = Comment.create!(
-    comment:""
-)
 
 puts "created #{ Comment.count } comments."
 ####################################
