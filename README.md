@@ -3,8 +3,7 @@
 ![alt text](app/assets/images/screenshot2.png)
 ![alt text](app/assets/images/screenshot3.png)
 
-I created this web application for my second individual project for General Assembly Software Engineering Immersive Course. We were tasked to create a CRUD system using everything we had learnt in the last 5 weeks about front and back end web development. We were given about a week to create a functioning application complete with Models (at least 3), Views, Controllers, Gems and site deployment (Heroku).
-This website is for people to discuss movies and share their thoughts about movies.
+Almonds is my second individual project after 5 weeks studying at General Assembly for Software Engineering Immersive Course. We were required to use Ruby to create a CRUD system with at least 3 models. 5 models were included in Almonds.
 
 ## Author: 
 Wen Gong
