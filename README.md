@@ -17,7 +17,7 @@ Email: 123@gmail.com
 Password: chicken
 
 ## Object Model Associations
-![alt text](app/assets/images/screenshot4.png)
+![alt text](app/assets/images/Screenshot4.png)
 
 ## Tech used: 
 * Ruby on Rails 
